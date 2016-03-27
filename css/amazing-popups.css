@@ -1,0 +1,801 @@
+@charset "UTF-8";
+
+/*!
+ * amazing-popups.css
+ * Version - 1.0
+ *
+ * Author. Gerardo Mendoza Barrera
+ */
+
+.gamebAP-bg-layout{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top:0;
+	left: 0;
+	z-index: 9999;
+	display: none;
+}
+.gamebAP{
+	position: fixed;
+	display: block;
+	z-index: 99999;
+	*max-width:80%;
+	overflow: hidden;
+	display: none;
+	line-height: normal;
+}
+.gamebAP-content{
+	padding: 1rem;
+	float:left;
+	width: 100%;
+}
+.gamebAP-Buttons{
+	width: 100%;
+	float: left;
+	left: 0%;
+}
+.gamebAP-Buttons>div{
+	width:28%;
+	margin:10px 2%;
+	float:left;
+}
+.gamebAPclose-button{
+	position: absolute;
+	display: block;
+	z-index: 99999;
+}
+.gamebAP-button{
+	padding:0.5rem 1rem;
+}
+.gamebAP .gamebAP-Buttons.bottom-buttons{
+    position: absolute;
+    bottom:10px;
+}
+.gamebAPclose-button span{
+	cursor: pointer;
+}
+.gamebAPclose-button.topLeft{
+	top:10px;
+	left:10px;
+}
+.gamebAPclose-button.topRight{
+	top:10px;
+	right:10px;
+}
+.gamebAPclose-button.bottomRight{
+	bottom:10px;
+	right:10px;
+}
+.gamebAPclose-button.bottomLeft{
+	bottom:10px;
+	left:10px;
+}
+span.behave-ok, span.behave-cancel{
+	cursor: pointer;
+}
+.gamebAP .button-container{
+	text-align: center;
+    margin: 0px auto 0 10px;
+    float: right;
+}
+@media (min-width: 781px){
+    .gamebAP-Buttons .bottomMiddle:first-child{
+        padding-left: 48%;
+    }
+    .gamebAP-Buttons .bottomRight:first-child{
+        float:right !important;
+    }
+}
+@media (max-width: 780px) {
+  	.gamebAP-Buttons>div{
+		width:96%;
+		margin:10px 2%;
+		float:left;
+	}
+	.gamebAPcustom-defaults{
+		left: 5% !important;
+		right: 5% !important;
+	}
+    .gamebAP-content {
+        font-family: sans-serif;
+        font-size: 1rem !important;
+    }
+    .button-container{
+        width: 100%;
+    }
+}
+
+/* Bassic white */
+.gamebAP.basicWhite{
+	color:black;
+	padding: 1rem;
+	box-shadow: 0px 0px 10px rgb(130, 130, 130);
+	overflow: visible;
+	border: 1px solid rgba(0, 0, 0, 0.66);
+	font-family: sans-serif;
+	background-color: white;
+}
+.gamebAP.basicWhite .gamebAPclose-button{
+    color: black;
+    text-shadow: 1px 1px 2px gray;
+    font-weight: bold;
+}
+.gamebAP.basicWhite .gamebAPclose-button.topRight{
+	top:4px;
+	right:10px;
+}.gamebAP.basicWhite .gamebAPclose-button.bottomRight{
+	bottom:4px;
+	right:10px;
+}.gamebAP.basicWhite .gamebAPclose-button.topLeft{
+	top:4px;
+	left:10px;
+}.gamebAP.basicWhite .gamebAPclose-button.bottomLeft{
+	bottom:4px;
+	left:10px;
+}
+.gamebAP.basicWhite .gamebAP-button{
+	padding: 0.5rem 2rem;
+    border: 1px solid gray;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    color: black;
+    text-shadow: 2px 1px 1px white;
+    box-shadow: 1px 1px 1px gray;
+}
+.gamebAP.basicWhite .gamebAP-title{
+	text-align: center;
+	font-family: sans-serif;
+	font-size: 2rem;
+}
+.gamebAP.basicWhite .gamebAP-content{
+    font-family: sans-serif;
+    font-size: 1.5rem;
+}
+/* END: Bassic white */
+
+/* Bassic gray */
+.gamebAP.basicGray{
+	color:black;
+	padding: 1rem;
+	box-shadow: inset 0px 0px 50px rgb(130, 130, 130);
+	overflow: visible;
+	border: 1px solid rgba(0, 0, 0, 0.66);
+	font-family: sans-serif;
+	background-color: white;
+}
+.gamebAP.basicGray .gamebAPclose-button{
+    color: white;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    background-color: black;
+    border-radius: 50% 50%;
+    font-size: 13px;
+    padding-top: 3px;
+    box-shadow: 2px 2px 7px rgba(10,10,10,.6);
+    border: 2px solid white;
+    font-family: sans-serif;
+}
+.gamebAP.basicGray .gamebAPclose-button.topRight{
+	top:-10px;
+	right:-10px;
+}.gamebAP.basicGray .gamebAPclose-button.bottomRight{
+	bottom:-10px;
+	right:-10px;
+}.gamebAP.basicGray .gamebAPclose-button.topLeft{
+	top:-10px;
+	left:-10px;
+}.gamebAP.basicGray .gamebAPclose-button.bottomLeft{
+	bottom:-10px;
+	left:-10px;
+}
+.gamebAP.basicGray .gamebAP-title{
+	text-align: center;
+	font-family: sans-serif;
+	font-size: 2rem;
+}
+.gamebAP.basicGray .gamebAP-content{
+    font-family: sans-serif;
+    font-size: 1.5rem;
+}
+/* END: Bassic gray */
+
+/* Winner Alert */
+.gamebAP.winner{
+    background-color: yellow;
+    border: 2px solid red;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 10px rgba(97, 97, 97, 0.49);
+    font-family: sans-serif;
+}
+.gamebAP.winner .gamebAP-title{
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 3rem;
+    color: red;
+    font-weight: bolder;
+    text-shadow: 2px 2px 1px rgba(121, 121, 121, 0.56);
+    letter-spacing: 6px;
+    text-transform: uppercase;
+}
+.gamebAP.winner .gamebAP-content{
+    font-family: sans-serif;
+    font-size: 1rem;
+    background-color: white;
+    padding: 1rem;
+    margin: 2% 5%;
+    width: 90%;
+    height: auto;
+    border: 5px dotted red;
+    box-shadow: 4px 4px 10px black;
+}
+.gamebAP.winner .gamebAPclose-button{
+    color: red;
+    text-shadow: 1px 1px 2px black;
+    font-weight: bold;
+}
+.gamebAP.winner .gamebAPclose-button.topRight{
+	top:4px;
+	right:10px;
+}.gamebAP.winner .gamebAPclose-button.bottomRight{
+	bottom:4px;
+	right:10px;
+}.gamebAP.winner .gamebAPclose-button.topLeft{
+	top:4px;
+	left:10px;
+}.gamebAP.winner .gamebAPclose-button.bottomLeft{
+	bottom:4px;
+	left:10px;
+}
+.gamebAP.winner .gamebAP-button{
+	padding: 0.5rem 2rem;
+    border: 1px solid red;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    color: white;
+    text-shadow: 2px 1px 1px black;
+    box-shadow: 1px 1px 1px black;
+}
+/* END: Winner Alert */
+
+/* ClassicPostal */
+.gamebAP.classicPostal {
+	border: 10px dashed rgba(0, 0, 0, 0.3);
+	padding: 1rem;
+	color:white;
+	background-color: rgb(39, 117, 173);
+	overflow: visible;
+	text-shadow: 2px 2px 1px rgba(10,10,10,0.6);
+}
+.gamebAP.classicPostal .gamebAP-button{
+    text-align: center;
+    font-family: sans-serif;
+    border-bottom: 3px solid rgba(10,10,10,0.4);
+    font-size: 1rem;
+    font-weight: bold;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.gamebAP.classicPostal .gamebAPclose-button{
+    color: white;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    background-color: darkgreen;
+    border-radius: 50% 50%;
+    font-size: 13px;
+    padding-top: 3px;
+    box-shadow: 2px 2px 7px rgba(10,10,10,.6);
+    border: 2px solid white;
+    font-family: sans-serif;
+}
+.gamebAP.classicPostal .gamebAPclose-button.topRight{
+	top:-20px;
+	right:-20px;
+}.gamebAP.classicPostal .gamebAPclose-button.bottomRight{
+	bottom:-20px;
+	right:-20px;
+}.gamebAP.classicPostal .gamebAPclose-button.topLeft{
+	top:-20px;
+	left:-20px;
+}.gamebAP.classicPostal .gamebAPclose-button.bottomLeft{
+	bottom:-20px;
+	left:-20px;
+}
+.gamebAP.classicPostal .gamebAP-title{
+	text-align: center;
+	font-family: sans-serif;
+	font-size: 2rem;
+}
+.gamebAP.classicPostal .gamebAP-content{
+    font-family: sans-serif;
+    font-size: 1.5rem;
+}
+/* END: ClassicPostal */
+
+/* Soft Pink*/
+.gamebAP.softPink{
+    color: black;
+    padding: 1rem;
+    overflow: visible;
+    font-family: sans-serif;
+    background-color: white;
+    border: 12px solid pink;
+    border-radius: 20px;
+}
+.gamebAP.softPink .gamebAPclose-button{
+    color: pink;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    background-color: white;
+    border-radius: 50% 50%;
+    font-size: 13px;
+    padding-top: 3px;
+    font-family: sans-serif;
+    border: 2px solid pink;
+}
+.gamebAP.softPink .gamebAPclose-button.topRight{
+	top:-10px;
+	right:-10px;
+}.gamebAP.softPink .gamebAPclose-button.bottomRight{
+	bottom:-10px;
+	right:-10px;
+}.gamebAP.softPink .gamebAPclose-button.topLeft{
+	top:-10px;
+	left:-10px;
+}.gamebAP.softPink .gamebAPclose-button.bottomLeft{
+	bottom:-10px;
+	left:-10px;
+}
+.gamebAP.softPink .gamebAP-title{
+	text-align: center;
+	font-family: sans-serif;
+	font-size: 2rem;
+}
+.gamebAP.softPink .gamebAP-content{
+    font-family: sans-serif;
+    font-size: 1.5rem;
+}
+.gamebAP.softPink .gamebAP-button{
+    border-radius: 15px;
+    color: white;
+    border: 2px solid pink;
+}
+/* END: Soft Pink*/
+
+/* Soft Blue*/
+.gamebAP.softBlue{
+    color: black;
+    padding: 1rem;
+    overflow: visible;
+    font-family: sans-serif;
+    background-color: white;
+    border: 12px solid rgb(0, 126, 255);
+    border-radius: 20px;
+}
+.gamebAP.softBlue .gamebAPclose-button{
+    color: rgb(0, 126, 255);
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    background-color: white;
+    border-radius: 50% 50%;
+    font-size: 13px;
+    padding-top: 3px;
+    font-family: sans-serif;
+    border: 2px solid rgb(0, 126, 255);
+}
+.gamebAP.softBlue .gamebAPclose-button.topRight{
+	top:-10px;
+	right:-10px;
+}.gamebAP.softBlue .gamebAPclose-button.bottomRight{
+	bottom:-10px;
+	right:-10px;
+}.gamebAP.softBlue .gamebAPclose-button.topLeft{
+	top:-10px;
+	left:-10px;
+}.gamebAP.softBlue .gamebAPclose-button.bottomLeft{
+	bottom:-10px;
+	left:-10px;
+}
+.gamebAP.softBlue .gamebAP-title{
+	text-align: center;
+	font-family: sans-serif;
+	font-size: 2rem;
+}
+.gamebAP.softBlue .gamebAP-content{
+    font-family: sans-serif;
+    font-size: 1.5rem;
+}
+.gamebAP.softBlue .gamebAP-button{
+    border-radius: 15px;
+    color: white;
+    border: 2px solid rgb(0, 126, 255);
+}
+/* END: Soft Blue*/
+
+/* Soft Green*/
+.gamebAP.softGreen{
+    color: black;
+    padding: 1rem;
+    overflow: visible;
+    font-family: sans-serif;
+    background-color: white;
+    border: 12px solid rgb(0, 255, 126);
+    border-radius: 20px;
+}
+.gamebAP.softGreen .gamebAPclose-button{
+    color: rgb(0, 255, 126);
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    background-color: white;
+    border-radius: 50% 50%;
+    font-size: 13px;
+    padding-top: 3px;
+    font-family: sans-serif;
+    border: 2px solid rgb(0, 255, 126);
+}
+.gamebAP.softGreen .gamebAPclose-button.topRight{
+	top:-10px;
+	right:-10px;
+}.gamebAP.softGreen .gamebAPclose-button.bottomRight{
+	bottom:-10px;
+	right:-10px;
+}.gamebAP.softGreen .gamebAPclose-button.topLeft{
+	top:-10px;
+	left:-10px;
+}.gamebAP.softGreen .gamebAPclose-button.bottomLeft{
+	bottom:-10px;
+	left:-10px;
+}
+.gamebAP.softGreen .gamebAP-title{
+	text-align: center;
+	font-family: sans-serif;
+	font-size: 2rem;
+}
+.gamebAP.softGreen .gamebAP-content{
+    font-family: sans-serif;
+    font-size: 1.5rem;
+}
+.gamebAP.softGreen .gamebAP-button{
+    border-radius: 15px;
+    color: white;
+    border: 2px solid rgb(0, 255, 126);
+}
+/* END: Soft Green*/
+
+/* Classic Windows */
+.gamebAP.classicWindows{
+	background-color: #BFBFBF;
+	border: 2px outset #DEDEDE;
+}
+.gamebAP.classicWindows .gamebAP-title{
+	background: #1e5799; /* Old browsers */
+	background: -moz-linear-gradient(left,  #1e5799 0%, #2989d8 16%, #207cca 37%, #7db9e8 65%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left,  #1e5799 0%,#2989d8 16%,#207cca 37%,#7db9e8 65%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right,  #1e5799 0%,#2989d8 16%,#207cca 37%,#7db9e8 65%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=1 ); /* IE6-9 */
+    color: white;
+    font-family: monospace;
+    line-height: normal;
+    font-size: 15px;
+    letter-spacing: 2px;
+    height: 25px;
+    *position: absolute;
+    width: 100%;
+    padding: 4px 0px 0 15px;
+    text-shadow: 1px 1px black;
+}
+.gamebAP.classicWindows .gamebAPclose-button{
+	width: 18px;
+	height: 18px;
+	background-color: #BFBFBF;
+	border: 2px outset #DEDEDE;
+	font-size: 12px;
+    text-align: center;
+}
+.gamebAP.classicWindows .gamebAPclose-button.topRight{
+	top:3px;
+	right:3px;
+}.gamebAP.classicWindows .gamebAPclose-button.bottomRight{
+	bottom:3px;
+	right:3px;
+}.gamebAP.classicWindows .gamebAPclose-button.topLeft{
+	top:3px;
+	left:3px;
+}.gamebAP.classicWindows .gamebAPclose-button.bottomLeft{
+	bottom:3px;
+	left:3px;
+}
+.gamebAP.classicWindows .gamebAP-button{
+	background-color: #BFBFBF;
+	border: 2px outset #DEDEDE;
+}
+/* END: Classic Windows */
+
+/* Modern Windows */
+.gamebAP.modernWindows{
+	border: 2px solid #2672EC;
+	background-color: #EAEAEA;
+}
+.gamebAP.modernWindows .gamebAP-title{
+    background-color: #2672EC;
+    color: white;
+    font-family: sans-serif;
+    line-height: normal;
+    font-size: 15px;
+    letter-spacing: 2px;
+    height: 30px;
+    *position: absolute;
+    width: 100%;
+    padding: 4px 0px 0 15px;
+    text-shadow: 1px 1px black;
+}
+.gamebAP.modernWindows .gamebAPclose-button{
+    width: 28px;
+    height: 28px;
+    -webkit-transform: scale(1.5,1);
+    -moz-transform: scale(1.5,1);
+    -ms-transform: scale(1.5,1);
+    -o-transform: scale(1.5,1);
+    transform: scale(1.5,1);
+    font-family: monospace;
+    font-size: 17px;
+    padding: 4px 8px;
+}
+.gamebAP.modernWindows .gamebAPclose-button:hover{
+	background-color: rgba(255,0,0,0.6);
+}
+.gamebAP.modernWindows .gamebAPclose-button.topRight{
+	top:1px;
+	right:3px;
+}.gamebAP.modernWindows .gamebAPclose-button.bottomRight{
+	bottom:1px;
+	right:3px;
+}.gamebAP.modernWindows .gamebAPclose-button.topLeft{
+	top:1px;
+	left:3px;
+}.gamebAP.modernWindows .gamebAPclose-button.bottomLeft{
+	bottom:1px;
+	left:3px;
+}
+.gamebAP.modernWindows .gamebAP-button{
+	background-color: #EAEAEA;
+    border: 2px solid #B5B5B5;
+    padding: 5px 20px;
+    font-size: 13px;
+    font-family: sans-serif;
+}.gamebAP.modernWindows .gamebAP-button:hover{
+	border: 2px solid #2672EC;
+}
+/* END: Modern Windows */
+
+/* Modern Windows Green*/
+.gamebAP.modernWindowsGreen{
+	border: 2px solid #008A00;
+	background-color: #EAEAEA;
+}
+.gamebAP.modernWindowsGreen .gamebAP-title{
+    background-color: #008A00;
+    color: white;
+    font-family: sans-serif;
+    line-height: normal;
+    font-size: 15px;
+    letter-spacing: 2px;
+    height: 30px;
+    *position: absolute;
+    width: 100%;
+    padding: 4px 0px 0 15px;
+    text-shadow: 1px 1px black;
+}
+.gamebAP.modernWindowsGreen .gamebAPclose-button{
+    width: 28px;
+    height: 28px;
+    -webkit-transform: scale(1.5,1);
+    -moz-transform: scale(1.5,1);
+    -ms-transform: scale(1.5,1);
+    -o-transform: scale(1.5,1);
+    transform: scale(1.5,1);
+    font-family: monospace;
+    font-size: 17px;
+    padding: 4px 8px;
+}
+.gamebAP.modernWindowsGreen .gamebAPclose-button:hover{
+	background-color: rgba(255,0,0,0.6);
+}
+.gamebAP.modernWindowsGreen .gamebAPclose-button.topRight{
+	top:1px;
+	right:3px;
+}.gamebAP.modernWindowsGreen .gamebAPclose-button.bottomRight{
+	bottom:1px;
+	right:3px;
+}.gamebAP.modernWindowsGreen .gamebAPclose-button.topLeft{
+	top:1px;
+	left:3px;
+}.gamebAP.modernWindowsGreen .gamebAPclose-button.bottomLeft{
+	bottom:1px;
+	left:3px;
+}
+.gamebAP.modernWindowsGreen .gamebAP-button{
+	background-color: #EAEAEA;
+    border: 2px solid #B5B5B5;
+    padding: 5px 20px;
+    font-size: 13px;
+    font-family: sans-serif;
+}.gamebAP.modernWindowsGreen .gamebAP-button:hover{
+	border: 2px solid #008A00;
+}
+/* END: Modern Windows Green*/
+
+/* Modern Windows Purple*/
+.gamebAP.modernWindowsPurple{
+	border: 2px solid #8C0095;
+	background-color: #EAEAEA;
+}
+.gamebAP.modernWindowsPurple .gamebAP-title{
+    background-color: #8C0095;
+    color: white;
+    font-family: sans-serif;
+    line-height: normal;
+    font-size: 15px;
+    letter-spacing: 2px;
+    height: 30px;
+    *position: absolute;
+    width: 100%;
+    padding: 4px 0px 0 15px;
+    text-shadow: 1px 1px black;
+}
+.gamebAP.modernWindowsPurple .gamebAPclose-button{
+    width: 28px;
+    height: 28px;
+    -webkit-transform: scale(1.5,1);
+    -moz-transform: scale(1.5,1);
+    -ms-transform: scale(1.5,1);
+    -o-transform: scale(1.5,1);
+    transform: scale(1.5,1);
+    font-family: monospace;
+    font-size: 17px;
+    padding: 4px 8px;
+}
+.gamebAP.modernWindowsPurple .gamebAPclose-button:hover{
+	background-color: rgba(255,0,0,0.6);
+}
+.gamebAP.modernWindowsPurple .gamebAPclose-button.topRight{
+	top:1px;
+	right:3px;
+}.gamebAP.modernWindowsPurple .gamebAPclose-button.bottomRight{
+	bottom:1px;
+	right:3px;
+}.gamebAP.modernWindowsPurple .gamebAPclose-button.topLeft{
+	top:1px;
+	left:3px;
+}.gamebAP.modernWindowsPurple .gamebAPclose-button.bottomLeft{
+	bottom:1px;
+	left:3px;
+}
+.gamebAP.modernWindowsPurple .gamebAP-button{
+	background-color: #EAEAEA;
+    border: 2px solid #B5B5B5;
+    padding: 5px 20px;
+    font-size: 13px;
+    font-family: sans-serif;
+}.gamebAP.modernWindowsPurple .gamebAP-button:hover{
+	border: 2px solid #8C0095;
+}
+/* END: Modern Windows Purple*/
+
+/* Minimalist*/
+.gamebAP.minimalist{
+    box-shadow: inset 0px 0px 0px 3px rgba(255, 255, 255, 0.55);
+    background-color: white;
+    padding: 1rem;
+    text-align: center;
+}
+.gamebAP.minimalist .gamebAP-title{
+    color: #333;
+    font-family: sans-serif;
+    line-height: normal;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    *position: absolute;
+    width: 100%;
+}
+.gamebAP.minimalist .gamebAPclose-button{
+    width: 28px;
+    height: 28px;
+    font-family: monospace;
+    font-size: 17px;
+    padding: 4px 8px;
+}
+.gamebAP.minimalist .gamebAPclose-button.topRight{
+	top:1px;
+	right:3px;
+}.gamebAP.minimalist .gamebAPclose-button.bottomRight{
+	bottom:1px;
+	right:3px;
+}.gamebAP.minimalist .gamebAPclose-button.topLeft{
+	top:1px;
+	left:3px;
+}.gamebAP.minimalist .gamebAPclose-button.bottomLeft{
+	bottom:1px;
+	left:3px;
+}
+.gamebAP.minimalist .gamebAP-button{
+	background-color: transparent;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    box-shadow: 0px 0px 0px 1px rgba(255,255,255,0.4);
+}
+/* END: Minimalist*/
+
+/* Facebook look*/
+.gamebAP.facebookLook{
+    background-color: white;
+    box-shadow: 0px 0px 10px #A5A5A5;
+    border: 1px solid #A2A2A2;
+}
+.gamebAP.facebookLook .gamebAP-title{
+    background-color: #3B5998;
+    border: 1px solid #3B5998;
+    color: white;
+    font-family: sans-serif;
+    line-height: normal;
+    font-size: 17px;
+    letter-spacing: 1px;
+    height: 30px;
+    *position: absolute;
+    width: 100%;
+    padding: 7px 0px 0 15px;
+}
+.gamebAP.facebookLook .gamebAPclose-button{
+    width: 28px;
+    height: 28px;
+    font-family: sans-serif;
+    font-size: 12px;
+    padding: 8px 8px;
+    color: white;
+    font-weight: 100;
+}
+.gamebAP.facebookLook .gamebAPclose-button.topRight{
+    top:1px;
+    right:3px;
+}.gamebAP.facebookLook .gamebAPclose-button.bottomRight{
+    bottom:1px;
+    right:3px;
+}.gamebAP.facebookLook .gamebAPclose-button.topLeft{
+    top:1px;
+    left:3px;
+}.gamebAP.facebookLook .gamebAPclose-button.bottomLeft{
+    bottom:1px;
+    left:3px;
+}
+.gamebAP.facebookLook .gamebAP-button{
+    background-color: #EAEAEA;
+    border: 1px outset #D6D6D6;
+    padding: 5px 20px;
+    font-size: 13px;
+    font-family: sans-serif;
+}
+.gamebAP.facebookLook .gamebAP-button.behave-ok{
+    background-color: #3B5998;
+    color: white;
+}
+.gamebAP.facebookLook .gamebAP-Buttons{
+    background-color: #EAEAEA;    
+}
+.gamebAP .gamebAP-Buttons.bottom-buttons{
+    bottom: 0px;
+    padding: 10px;
+    border-top: 1px solid #A2A2A2;
+}
+/*END: Facebook Look*/

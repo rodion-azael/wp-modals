@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+/*!
+ * amazing-popups-admin.css
+ * Version - 1.0
+ *
+ * Author. Gerardo Mendoza Barrera
+ */
+#gamebAP_buttons{
+	border-collapse: collapse;
+}
+.btnSeparator{
+	border-top: 1px solid #cecece;
+    height: 45px;
+    vertical-align: middle;
+}
